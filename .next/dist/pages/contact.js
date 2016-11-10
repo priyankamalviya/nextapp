@@ -28,6 +28,10 @@ var _react = require('/Users/priyankamalviya/Desktop/nextApp/node_modules/react/
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Nav = require('../components/Nav');
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _class = function (_React$Component) {
@@ -49,6 +53,7 @@ var _class = function (_React$Component) {
           null,
           'Contact Page'
         ),
+        _react2.default.createElement(_Nav2.default, null),
         _react2.default.createElement(
           'p',
           null,

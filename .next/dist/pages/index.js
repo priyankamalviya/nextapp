@@ -8,9 +8,9 @@ var _react = require('/Users/priyankamalviya/Desktop/nextApp/node_modules/react/
 
 var _react2 = _interopRequireDefault(_react);
 
-var _link = require('/Users/priyankamalviya/Desktop/nextApp/node_modules/next/dist/lib/link.js');
+var _Nav = require('../components/Nav');
 
-var _link2 = _interopRequireDefault(_link);
+var _Nav2 = _interopRequireDefault(_Nav);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23,11 +23,7 @@ exports.default = function () {
       null,
       'Its awesome working on next.js'
     ),
-    _react2.default.createElement(
-      _link2.default,
-      { href: '/contact' },
-      'Contact Page'
-    )
+    _react2.default.createElement(_Nav2.default, null)
   );
 };
     if (module.hot) {

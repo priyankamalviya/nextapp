@@ -1,10 +1,10 @@
 import React from 'react'
-import Link from 'next/link'
+import Nav from '../components/Nav'
 
 export default() => (
   <div>
     <h1>Its awesome working on next.js</h1>
 
-    <Link href="/contact">Contact Page</Link>
+  <Nav />
   </div>
 )

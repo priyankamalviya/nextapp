@@ -66,7 +66,7 @@ module.exports =
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "63d1715a76bf03be82a5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "27db6466ea10f21d5465"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -713,9 +713,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _link = __webpack_require__(96);
+	var _Nav = __webpack_require__(97);
 
-	var _link2 = _interopRequireDefault(_link);
+	var _Nav2 = _interopRequireDefault(_Nav);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -728,11 +728,7 @@ module.exports =
 	      null,
 	      'Its awesome working on next.js'
 	    ),
-	    _react2.default.createElement(
-	      _link2.default,
-	      { href: '/contact' },
-	      'Contact Page'
-	    )
+	    _react2.default.createElement(_Nav2.default, null)
 	  );
 	};
 	    if (true) {
@@ -760,6 +756,44 @@ module.exports =
 /***/ function(module, exports) {
 
 	module.exports = require("next/link");
+
+/***/ },
+
+/***/ 97:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(87);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _link = __webpack_require__(96);
+
+	var _link2 = _interopRequireDefault(_link);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = function () {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      _link2.default,
+	      { href: '/' },
+	      'Home'
+	    ),
+	    _react2.default.createElement(
+	      _link2.default,
+	      { href: '/contact' },
+	      'Contact Page'
+	    )
+	  );
+	};
 
 /***/ }
 
