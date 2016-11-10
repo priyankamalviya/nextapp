@@ -261,7 +261,7 @@ module.exports =
 /******/ 			hotSetStatus("prepare");
 /******/ 			hotCallback = callback;
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = 1;
+/******/ 			var chunkId = 2;
 /******/ 			{ // eslint-disable-line no-lone-blocks
 /******/ 				/*globals chunkId */
 /******/ 				hotEnsureUpdateChunk(chunkId);
@@ -585,7 +585,7 @@ module.exports =
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(91);
-	module.exports = __webpack_require__(93);
+	module.exports = __webpack_require__(94);
 
 
 /***/ },
@@ -2127,12 +2127,7 @@ module.exports =
 /***/ },
 /* 88 */,
 /* 89 */,
-/* 90 */
-/***/ function(module, exports) {
-
-	module.exports = require("next/css");
-
-/***/ },
+/* 90 */,
 /* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2233,7 +2228,8 @@ module.exports =
 
 
 /***/ },
-/* 93 */
+/* 93 */,
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2266,98 +2262,62 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _css = __webpack_require__(90);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var _css2 = _interopRequireDefault(_css);
+	var _class = function (_React$Component) {
+	  (0, _inherits3.default)(_class, _React$Component);
 
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
-
-	var Error = function (_React$Component) {
-	  (0, _inherits3.default)(Error, _React$Component);
-
-	  function Error() {
-	    (0, _classCallCheck3.default)(this, Error);
-	    return (0, _possibleConstructorReturn3.default)(this, (Error.__proto__ || (0, _getPrototypeOf2.default)(Error)).apply(this, arguments));
+	  function _class() {
+	    (0, _classCallCheck3.default)(this, _class);
+	    return (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || (0, _getPrototypeOf2.default)(_class)).apply(this, arguments));
 	  }
 
-	  (0, _createClass3.default)(Error, [{
+	  (0, _createClass3.default)(_class, [{
 	    key: 'render',
 	    value: function render() {
-	      var statusCode = this.props.statusCode;
-
-	      var title = statusCode === 404 ? 'This page could not be found' : 'Internal Server Error';
-
-	      return _react2.default.createElement('div', { className: (0, _css.merge)(styles.error, styles['error_' + statusCode]) }, _react2.default.createElement('div', { className: styles.text }, _react2.default.createElement('h1', { className: styles.h1 }, statusCode), _react2.default.createElement('div', { className: styles.desc }, _react2.default.createElement('h2', { className: styles.h2 }, title, '.'))));
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Contact Page'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Lorem Ipsum rendered on: ',
+	          this.props.renderLocation
+	        )
+	      );
 	    }
 	  }], [{
 	    key: 'getInitialProps',
 	    value: function getInitialProps(_ref) {
-	      var res = _ref.res,
-	          xhr = _ref.xhr;
+	      var req = _ref.req;
 
-	      var statusCode = res ? res.statusCode : xhr.status;
-	      return { statusCode: statusCode };
+	      var renderLocation = req ? 'Server' : 'Client';
+	      return {
+	        renderLocation: renderLocation
+	      };
 	    }
 	  }]);
-	  return Error;
+	  return _class;
 	}(_react2.default.Component);
 
-	exports.default = Error;
-
-	var styles = {
-	  error: (0, _css2.default)({
-	    color: '#000',
-	    background: '#fff',
-	    top: 0,
-	    bottom: 0,
-	    left: 0,
-	    right: 0,
-	    position: 'absolute',
-	    fontFamily: '-apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Fira Sans", Avenir, "Helvetica Neue", "Lucida Grande", sans-serif',
-	    textAlign: 'center',
-	    paddingTop: '20%'
-	  }),
-
-	  desc: (0, _css2.default)({
-	    display: 'inline-block',
-	    textAlign: 'left',
-	    lineHeight: '49px',
-	    height: '49px',
-	    verticalAlign: 'middle'
-	  }),
-
-	  h1: (0, _css2.default)({
-	    display: 'inline-block',
-	    borderRight: '1px solid rgba(0, 0, 0,.3)',
-	    margin: 0,
-	    marginRight: '20px',
-	    padding: '10px 23px',
-	    fontSize: '24px',
-	    fontWeight: 500,
-	    verticalAlign: 'top'
-	  }),
-
-	  h2: (0, _css2.default)({
-	    fontSize: '14px',
-	    fontWeight: 'normal',
-	    margin: 0,
-	    padding: 0
-	  })
-	};
+	exports.default = _class;
 	    if (true) {
 	      module.hot.accept()
 
 	      var Component = module.exports.default || module.exports
-	      Component.__route = "/_error"
+	      Component.__route = "/contact"
 
 	      if (module.hot.status() !== 'idle') {
 	        var components = next.router.components
 	        for (var r in components) {
 	          if (!components.hasOwnProperty(r)) continue
 
-	          if (components[r].Component.__route === "/_error") {
+	          if (components[r].Component.__route === "/contact") {
 	            next.router.update(r, Component)
 	          }
 	        }

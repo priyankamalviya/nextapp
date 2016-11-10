@@ -66,7 +66,7 @@ module.exports =
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "544561723694789d7dde"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "63d1715a76bf03be82a5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -261,7 +261,7 @@ module.exports =
 /******/ 			hotSetStatus("prepare");
 /******/ 			hotCallback = callback;
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = 2;
+/******/ 			var chunkId = 3;
 /******/ 			{ // eslint-disable-line no-lone-blocks
 /******/ 				/*globals chunkId */
 /******/ 				hotEnsureUpdateChunk(chunkId);
@@ -586,7 +586,7 @@ module.exports =
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(91);
-	module.exports = __webpack_require__(94);
+	module.exports = __webpack_require__(95);
 
 
 /***/ },
@@ -700,7 +700,7 @@ module.exports =
 
 /***/ },
 
-/***/ 94:
+/***/ 95:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -713,6 +713,10 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _link = __webpack_require__(96);
+
+	var _link2 = _interopRequireDefault(_link);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = function () {
@@ -723,6 +727,11 @@ module.exports =
 	      'h1',
 	      null,
 	      'Its awesome working on next.js'
+	    ),
+	    _react2.default.createElement(
+	      _link2.default,
+	      { href: '/contact' },
+	      'Contact Page'
 	    )
 	  );
 	};
@@ -744,6 +753,13 @@ module.exports =
 	      }
 	    }
 	  
+
+/***/ },
+
+/***/ 96:
+/***/ function(module, exports) {
+
+	module.exports = require("next/link");
 
 /***/ }
 
